@@ -67,7 +67,7 @@ module.exports = {
       },
     ],
   }),
-  LORDSMOBILE: (idPelanggan) =>  ({
+  MARVELSUPERWAR: (idPelanggan) =>  ({
     url : "http://api.sepulsa.com/api/v1/oscar/products/2274/",
     quantity: 1,
     options: [

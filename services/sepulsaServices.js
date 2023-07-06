@@ -1,9 +1,10 @@
 const axios = require("axios");
-const sepulsaBody = require("./sepulsaBody");
+const sepulsaBody = require("../utils/sepulsaBody");
+const { reformatResultJson } = require("../utils/reformatResult");
 
-const sepulsaGetMobileLegend = async (idPelanggan, idServer) => {
+const sepulsaGetDetailId = async (idPelanggan, idServer, gameTitle) => {
   try {
-    const generateBody = sepulsaBody["MOBILELEGEND"];
+    const generateBody = sepulsaBody[gameTitle];
     const configForPost = {
       url: "https://api.sepulsa.com/api/v1/carts/add/",
       headers: {
@@ -25,15 +26,15 @@ const sepulsaGetMobileLegend = async (idPelanggan, idServer) => {
       data: generateBody(idPelanggan, idServer),
       method: "POST",
     };
-
     const { data } = await axios(configForPost);
-
     const attrLength = data.data.lines[0].attributes.length;
     console.log(data.data.lines[0].attributes[attrLength - 2]);
-    return data.data.lines[0].attributes[attrLength - 2].value;
+    return reformatResultJson(data.data.lines[0].attributes[attrLength - 2].value);
   } catch (error) {
     throw new Error(error.message);
   }
 };
 
-sepulsaGetMobileLegend("214885010", "2253")
+module.exports = {
+  sepulsaGetDetailId
+};
