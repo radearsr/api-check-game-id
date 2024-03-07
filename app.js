@@ -1,6 +1,7 @@
 const express = require("express");
 const timeout = require("express-timeout-handler");
 const apiRoutes = require("./routes/apiRoutes");
+require("dotenv").config();
 
 const app = express();
 const PORT = process.env.SERVER_PORT || 3000;
