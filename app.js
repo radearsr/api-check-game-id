@@ -7,6 +7,18 @@ const app = express();
 const PORT = process.env.SERVER_PORT || 3000;
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use((req, res, next) => {
+  console.log(
+    "Request Time: ",
+    `${new Date().toLocaleString()} ${new Date().getTime()}`
+  );
+  console.log(
+    `${req.originalUrl} - ${req.method} - ${JSON.stringify(req.body)}`
+  );
+  next();
+});
 
 app.use("/api", apiRoutes);
 
