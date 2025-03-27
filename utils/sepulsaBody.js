@@ -1,16 +1,16 @@
 module.exports = {
-  FREEFIRE: (idPelanggan) =>  ({
-    url : "http://api.sepulsa.com/api/v1/oscar/products/564/",
+  FREEFIRE: (idPelanggan) => ({
+    url: "http://api.sepulsa.com/api/v1/oscar/products/564/",
     quantity: 1,
     options: [
       {
         option: "https://api.sepulsa.com/api/v1/oscar/options/1/",
         value: idPelanggan,
-      }
-    ]
+      },
+    ],
   }),
-  MOBILELEGEND: (idPelanggan, idServer) =>  ({
-    url : "http://api.sepulsa.com/api/v1/oscar/products/2202/",
+  MOBILELEGEND: (idPelanggan, idServer) => ({
+    url: "http://api.sepulsa.com/api/v1/oscar/products/2203/",
     quantity: 1,
     options: [
       {
@@ -21,20 +21,20 @@ module.exports = {
         option: "https://api.sepulsa.com/api/v1/oscar/options/21/",
         value: idServer,
       },
-    ]
+    ],
   }),
-  AOV: (idPelanggan) =>  ({
-    url : "http://api.sepulsa.com/api/v1/oscar/products/576/",
+  AOV: (idPelanggan) => ({
+    url: "http://api.sepulsa.com/api/v1/oscar/products/576/",
     quantity: 1,
     options: [
       {
         option: "https://api.sepulsa.com/api/v1/oscar/options/1/",
         value: idPelanggan,
       },
-    ]
+    ],
   }),
-  TOMANDJERRY: (idPelanggan, idServer) =>  ({
-    url : "http://api.sepulsa.com/api/v1/oscar/products/2338/",
+  TOMANDJERRY: (idPelanggan, idServer) => ({
+    url: "http://api.sepulsa.com/api/v1/oscar/products/2338/",
     quantity: 1,
     options: [
       {
@@ -44,11 +44,11 @@ module.exports = {
       {
         option: "https://api.sepulsa.com/api/v1/oscar/options/21/",
         value: idServer,
-      }
+      },
     ],
   }),
-  CALLOFDUTY: (idPelanggan) =>  ({
-    url : "http://api.sepulsa.com/api/v1/oscar/products/708/",
+  CALLOFDUTY: (idPelanggan) => ({
+    url: "http://api.sepulsa.com/api/v1/oscar/products/708/",
     quantity: 1,
     options: [
       {
@@ -57,8 +57,8 @@ module.exports = {
       },
     ],
   }),
-  LORDSMOBILE: (idPelanggan) =>  ({
-    url : "http://api.sepulsa.com/api/v1/oscar/products/746/",
+  LORDSMOBILE: (idPelanggan) => ({
+    url: "http://api.sepulsa.com/api/v1/oscar/products/746/",
     quantity: 1,
     options: [
       {
@@ -67,8 +67,8 @@ module.exports = {
       },
     ],
   }),
-  MARVELSUPERWAR: (idPelanggan) =>  ({
-    url : "http://api.sepulsa.com/api/v1/oscar/products/2274/",
+  MARVELSUPERWAR: (idPelanggan) => ({
+    url: "http://api.sepulsa.com/api/v1/oscar/products/2274/",
     quantity: 1,
     options: [
       {
